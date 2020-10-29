@@ -1,3 +1,15 @@
+/**
+ * Name: Nodejs Mongodb API
+ * Version: 1.0.0
+ * Description: MEAN Stack API with CRUD operations
+ * Author: Shrikumar Infotech
+ * Author URL: shrikumarinfotech.com
+ * Date: 29 October 2020
+ * Plugin URL: https://github.com/shrikumarinfotech/nodejs-mongodb-api
+ * License: GPLv2 or later
+ * License URL: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ */
+
 // Express
 const express = require('express');
 const app = express();
@@ -6,7 +18,7 @@ const app = express();
 const mongoose = require('mongoose');
 
 // Controllers
-const setupController = require('./controllers/setupController');
+const setupController = require('./controllers/setupController'); // Run only one time
 const apiControllers = require('./controllers/apiControllers');
 
 // Define port
@@ -25,7 +37,7 @@ mongoose.connect(config.todoDbUrlToConnect(), {
 });
 
 // Initiate the controllers
-// setupController(app);
+// setupController(app); // Run only one time
 apiControllers(app);
 
 // Respond to GET request
