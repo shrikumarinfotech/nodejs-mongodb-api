@@ -27,6 +27,9 @@ const port = process.env.PORT || 3000;
 // Set static files path
 app.use('/assets', express.static(__dirname + '/public'));
 
+// Load template engine and define
+app.set('view engine', 'ejs');
+
 // Connect MongoDB
 const config = require('./config');
 mongoose.connect(config.todoDbUrlToConnect(), {
@@ -42,7 +45,8 @@ apiControllers(app);
 
 // Respond to GET request
 app.get('/', function(req, res){
-    res.send('Hello world');
+    // res.send('Hello world');
+    res.render('index');
 });
 
 // Respond to the POST request
