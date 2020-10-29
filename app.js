@@ -30,6 +30,8 @@ app.use('/assets', express.static(__dirname + '/public'));
 // Load template engine and define
 app.set('view engine', 'ejs');
 
+
+
 // Connect MongoDB
 const config = require('./config');
 mongoose.connect(config.todoDbUrlToConnect(), {

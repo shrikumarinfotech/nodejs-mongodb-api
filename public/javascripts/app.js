@@ -8,13 +8,16 @@ function ctrlFunc(){
 
     this.todos = [
         {
-            todo: "Task 1"
+            todo: "Task 1",
+            isDone: false
         },
         {
-            todo: "Task 2"
+            todo: "Task 2",
+            isDone: true
         },
         {
-            todo: "Task 3"
+            todo: "Task 3",
+            isDone: false
         }
     ];
 }
